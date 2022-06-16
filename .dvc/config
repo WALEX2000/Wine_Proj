@@ -1,4 +1,7 @@
 [core]
     autostage = true
+    remote = gdrive
 [cache]
     type = copy
+['remote "gdrive"']
+    url = gdrive://14TQ1iCrrJFkgzHmwW0anifOSkPrWoQhg
