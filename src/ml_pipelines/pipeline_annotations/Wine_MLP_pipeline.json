@@ -1,0 +1,112 @@
+{
+    "primitives": [
+        "keras.Sequential.MLPMultiClassClassifier"
+    ],
+    "init_params": {
+        "keras.Sequential.MLPMultiClassClassifier": {
+            "classes": 3,
+            "epochs": 2000,
+            "batch_size": 64
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "keras.Sequential.MLPMultiClassClassifier#1": {
+            "classification": true,
+            "loss": "keras.losses.categorical_crossentropy",
+            "optimizer": "keras.optimizers.SGD",
+            "metrics": [
+                "accuracy"
+            ],
+            "epochs": 2000,
+            "input_dim": null,
+            "layers": [
+                {
+                    "class": "keras.layers.Dense",
+                    "parameters": {
+                        "units": "dense_1_units",
+                        "activation": "relu",
+                        "input_dim": "input_dim"
+                    }
+                },
+                {
+                    "class": "keras.layers.Dropout",
+                    "parameters": {
+                        "rate": "dropout_1_rate"
+                    }
+                },
+                {
+                    "class": "keras.layers.Dense",
+                    "parameters": {
+                        "units": "dense_2_units",
+                        "activation": "relu"
+                    }
+                },
+                {
+                    "class": "keras.layers.Dropout",
+                    "parameters": {
+                        "rate": "dropout_2_rate"
+                    }
+                },
+                {
+                    "class": "keras.layers.Dense",
+                    "parameters": {
+                        "units": "classes",
+                        "activation": "softmax"
+                    }
+                }
+            ],
+            "batch_size": 64,
+            "dense_1_units": 64,
+            "dense_2_units": 64,
+            "dropout_1_rate": 0.5,
+            "dropout_2_rate": 0.5
+        }
+    },
+    "tunable_hyperparameters": {
+        "keras.Sequential.MLPMultiClassClassifier#1": {
+            "dense_1_units": {
+                "type": "int",
+                "default": 64,
+                "range": [
+                    1,
+                    500
+                ]
+            },
+            "dense_2_units": {
+                "type": "int",
+                "default": 64,
+                "range": [
+                    1,
+                    500
+                ]
+            },
+            "dropout_1_rate": {
+                "type": "float",
+                "default": 0.5,
+                "range": [
+                    0.0,
+                    0.75
+                ]
+            },
+            "dropout_2_rate": {
+                "type": "float",
+                "default": 0.5,
+                "range": [
+                    0.0,
+                    0.75
+                ]
+            }
+        }
+    },
+    "outputs": {
+        "default": [
+            {
+                "name": "y",
+                "type": "array",
+                "variable": "keras.Sequential.MLPMultiClassClassifier#1.y"
+            }
+        ]
+    }
+}

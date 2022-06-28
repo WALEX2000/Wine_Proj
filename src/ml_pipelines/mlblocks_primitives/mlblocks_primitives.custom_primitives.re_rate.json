@@ -1,0 +1,16 @@
+{
+    "name": "Re-rate quality",
+    "primitive": "src.ml_pipelines.mlblocks_primitives.custom_primitives.re_rate",
+    "produce": {
+        "args": [
+            {
+            "name": "y"
+            }
+        ],
+        "output": [
+            {
+                "name": "y"
+            }
+        ]
+    }
+}

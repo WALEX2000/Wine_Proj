@@ -1,0 +1,7 @@
+meta:
+  pandas_profile_hash: 4c33c13a415a1cd00ea1352d8b4c63f9
+outs:
+- md5: c3542c30c32ecacfec1ba28b44949da0
+  path: winequality-red-FE.csv
+  size: 93485
+wdir: ..

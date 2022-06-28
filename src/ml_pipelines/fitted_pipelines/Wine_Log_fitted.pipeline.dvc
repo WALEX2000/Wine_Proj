@@ -1,0 +1,7 @@
+meta:
+  score: '0.17'
+  trained_with: winequality-red-FE.csv#4c33c13a415a1cd00ea1352d8b4c63f9
+outs:
+- md5: 25a37613e9af86647c59b7884da12062
+  path: Wine_Log_fitted.pipeline
+  size: 8572

@@ -1,1 +1,6 @@
 /winequality-red.csv
+/winequality-red-PCA.csv.csv
+/winequality-red-PCA.csv
+/winequality-red-Sel.csv
+/winequality-red-Lasso.csv
+/winequality-red-FE.csv

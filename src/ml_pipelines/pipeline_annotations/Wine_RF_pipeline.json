@@ -1,0 +1,109 @@
+{
+    "primitives": [
+        "sklearn.ensemble.RandomForestClassifier"
+    ],
+    "init_params": {
+        "sklearn.ensemble.RandomForestClassifier": {
+            "max_features": 1.0,
+            "n_estimators": 10
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
+            "n_jobs": null,
+            "verbose": 0,
+            "warm_start": false,
+            "class_weight": null,
+            "n_estimators": 10,
+            "max_features": 1.0,
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "min_weight_fraction_leaf": 0.0,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "bootstrap": true,
+            "oob_score": false
+        }
+    },
+    "tunable_hyperparameters": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "gini",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": null,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "int",
+                "default": 2,
+                "range": [
+                    2,
+                    100
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    100
+                ]
+            },
+            "min_weight_fraction_leaf": {
+                "type": "float",
+                "default": 0.0,
+                "range": [
+                    0.0,
+                    0.5
+                ]
+            },
+            "max_leaf_nodes": {
+                "type": "int",
+                "default": null,
+                "range": [
+                    2,
+                    1000
+                ]
+            },
+            "min_impurity_decrease": {
+                "type": "float",
+                "default": 0.0,
+                "range": [
+                    0.0,
+                    1000.0
+                ]
+            },
+            "bootstrap": {
+                "type": "bool",
+                "default": true
+            },
+            "oob_score": {
+                "type": "bool",
+                "default": false
+            }
+        }
+    },
+    "outputs": {
+        "default": [
+            {
+                "name": "y",
+                "type": "ndarray",
+                "variable": "sklearn.ensemble.RandomForestClassifier#1.y"
+            }
+        ]
+    }
+}

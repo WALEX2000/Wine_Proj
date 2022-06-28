@@ -1,0 +1,106 @@
+{
+    "primitives": [
+        "sklearn.ensemble.RandomForestRegressor",
+        "mlblocks_primitives.custom_primitives.round_pred"
+    ],
+    "init_params": {
+        "sklearn.ensemble.RandomForestRegressor": {
+            "criterion": "squared_error",
+            "max_features": 1.0
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "sklearn.ensemble.RandomForestRegressor#1": {
+            "n_jobs": null,
+            "verbose": 0,
+            "warm_start": false,
+            "criterion": "squared_error",
+            "max_features": 1.0,
+            "n_estimators": 10,
+            "max_depth": null,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "min_weight_fraction_leaf": 0.0,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "bootstrap": true,
+            "oob_score": false
+        },
+        "mlblocks_primitives.custom_primitives.round_pred#1": {}
+    },
+    "tunable_hyperparameters": {
+        "sklearn.ensemble.RandomForestRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    500
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": null,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "int",
+                "default": 2,
+                "range": [
+                    2,
+                    1000
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    1000
+                ]
+            },
+            "min_weight_fraction_leaf": {
+                "type": "float",
+                "default": 0.0,
+                "range": [
+                    0.0,
+                    100.0
+                ]
+            },
+            "max_leaf_nodes": {
+                "type": "int",
+                "default": null
+            },
+            "min_impurity_decrease": {
+                "type": "float",
+                "default": 0.0,
+                "range": [
+                    0.0,
+                    10.0
+                ]
+            },
+            "bootstrap": {
+                "type": "bool",
+                "default": true
+            },
+            "oob_score": {
+                "type": "bool",
+                "default": false
+            }
+        },
+        "mlblocks_primitives.custom_primitives.round_pred#1": {}
+    },
+    "outputs": {
+        "default": [
+            {
+                "name": "y",
+                "variable": "mlblocks_primitives.custom_primitives.round_pred#1.y"
+            }
+        ]
+    }
+}

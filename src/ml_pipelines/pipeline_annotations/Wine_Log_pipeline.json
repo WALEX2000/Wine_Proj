@@ -1,0 +1,122 @@
+{
+    "primitives": [
+        "sklearn.linear_model.LogisticRegression"
+    ],
+    "init_params": {
+        "sklearn.linear_model.LogisticRegression": {}
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "sklearn.linear_model.LogisticRegression#1": {
+            "n_jobs": null,
+            "warm_start": false,
+            "random_state": null,
+            "verbose": false,
+            "class_weight": null,
+            "fit_intercept": true,
+            "max_iter": 100,
+            "solver": "liblinear",
+            "penalty": "l2",
+            "C": 1.0,
+            "multi_class": "ovr",
+            "intercept_scaling": 1,
+            "tol": 0.0001,
+            "dual": false
+        }
+    },
+    "tunable_hyperparameters": {
+        "sklearn.linear_model.LogisticRegression#1": {
+            "fit_intercept": {
+                "type": "bool",
+                "description": "Specifies if a constant (e.g. bias or intercept) should be added to the decision function",
+                "default": true
+            },
+            "max_iter": {
+                "type": "int",
+                "description": "Useful only for the newton-cg, sag and lbfgs solvers. Maximum number of iterations taken for the solvers to converge.",
+                "default": 100,
+                "range": [
+                    1,
+                    100000
+                ]
+            },
+            "solver": {
+                "type": "str",
+                "description": "Algorithm to use in the optimization problem. Note that 'sag' and 'saga' fast convergence is only guaranteed on features with approximately the same scale. You can preprocess the data with a scaler from sklearn.preprocessing.",
+                "values": [
+                    "newton-cg",
+                    "lbfgs",
+                    "liblinear",
+                    "sag",
+                    "saga"
+                ],
+                "default": "liblinear"
+            },
+            "penalty": {
+                "type": "str",
+                "values": [
+                    "l1",
+                    "l2"
+                ],
+                "description": "used to specify the norm used in the penalization. The 'newton-cg', 'sag' and 'lbfgs' solvers support only 'l2' penalties.",
+                "default": "l2"
+            },
+            "C": {
+                "type": "float",
+                "description": "Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.",
+                "default": 1.0,
+                "range": [
+                    1e-06,
+                    100.0
+                ]
+            },
+            "multi_class": {
+                "type": "str",
+                "values": [
+                    "ovr",
+                    "multinomial",
+                    "auto"
+                ],
+                "description": {
+                    "ovr": "If set to 'ovr', then a binary problem is fit for each label.",
+                    "multinomial": "If set to 'multinomial' the loss minimised is the multinomial loss fit across the entire probability distribution. 'multinomial' is unavailable when solver='liblinear'.",
+                    "auto": "selects 'ovr' if the data is binary, or if solver='liblinear', and otherwise selects 'multinomial'."
+                },
+                "default": "ovr"
+            },
+            "intercept_scaling": {
+                "type": "float",
+                "description": "Useful only when the solver 'liblinear' is used and self.fit_intercept is set to True. In this case, x becomes [x, self.intercept_scaling], i.e. a 'synthetic' feature with constant value equal to intercept_scaling is appended to the instance vector. The intercept becomes intercept_scaling * synthetic_feature_weight.",
+                "default": 1,
+                "range": [
+                    0.0001,
+                    1000.0
+                ]
+            },
+            "tol": {
+                "type": "float",
+                "description": "Tolerance for stopping criteria.",
+                "default": 0.0001,
+                "range": [
+                    1e-06,
+                    0.01
+                ]
+            },
+            "dual": {
+                "type": "bool",
+                "description": "Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=False when n_samples > n_features.",
+                "default": false
+            }
+        }
+    },
+    "outputs": {
+        "default": [
+            {
+                "name": "y",
+                "type": "array",
+                "variable": "sklearn.linear_model.LogisticRegression#1.y"
+            }
+        ]
+    }
+}

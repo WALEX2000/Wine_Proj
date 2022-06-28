@@ -1,0 +1,16 @@
+{
+    "name": "Round y",
+    "primitive": "src.ml_pipelines.mlblocks_primitives.custom_primitives.round_pred",
+    "produce": {
+        "args": [
+            {
+            "name": "y"
+            }
+        ],
+        "output": [
+            {
+                "name": "y"
+            }
+        ]
+    }
+}

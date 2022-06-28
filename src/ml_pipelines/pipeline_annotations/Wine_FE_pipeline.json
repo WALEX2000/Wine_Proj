@@ -1,0 +1,43 @@
+{
+    "primitives": [
+        "mlblocks_primitives.custom_primitives.re_rate",
+        "pandas.DataFrame.drop"
+    ],
+    "init_params": {
+        "pandas.DataFrame.drop": {
+            "labels": [
+                "pH",
+                "free sulfur dioxide"
+            ],
+            "axis": "columns",
+            "errors": "raise"
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlblocks_primitives.custom_primitives.re_rate#1": {},
+        "pandas.DataFrame.drop#1": {
+            "labels": [
+                "pH",
+                "free sulfur dioxide"
+            ],
+            "axis": "columns",
+            "level": null,
+            "errors": "raise"
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlblocks_primitives.custom_primitives.re_rate#1": {},
+        "pandas.DataFrame.drop#1": {}
+    },
+    "outputs": {
+        "default": [
+            {
+                "name": "X",
+                "type": "pandas.DataFrame",
+                "variable": "pandas.DataFrame.drop#1.X"
+            }
+        ]
+    }
+}
